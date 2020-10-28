@@ -23,42 +23,42 @@ OpenPose是一个**实时多人关键点检测库，是用C++的多线程技术�
 
 * 所有的功能都被融合进了：  **simple-to-use OpenPose wrapper class**.
 
-The pose estimation work is based on the C++ code from [the ECCV 2016 demo](https://github.com/CMU-Perceptual-Computing-Lab/caffe_rtpose), "Realtime Multiperson Pose Estimation", [Zhe Cao](http://www.andrew.cmu.edu/user/zhecao), [Tomas Simon](http://www.cs.cmu.edu/~tsimon/), [Shih-En Wei](https://scholar.google.com/citations?user=sFQD3k4AAAAJ&hl=en), [Yaser Sheikh](http://www.cs.cmu.edu/~yaser/). The [full project repo](https://github.com/ZheC/Multi-Person-Pose-Estimation) includes Matlab and Python version, as well as training code.
+本姿态估计工作是基于来自[the ECCV 2016 demo](https://github.com/CMU-Perceptual-Computing-Lab/caffe_rtpose), "Realtime Multiperson Pose Estimation"的C++代码, [Zhe Cao](http://www.andrew.cmu.edu/user/zhecao), [Tomas Simon](http://www.cs.cmu.edu/~tsimon/), [Shih-En Wei](https://scholar.google.com/citations?user=sFQD3k4AAAAJ&hl=en), [Yaser Sheikh](http://www.cs.cmu.edu/~yaser/). The [full project repo](https://github.com/ZheC/Multi-Person-Pose-Estimation) includes Matlab and Python version, as well as training code.全部工程包含 matlab和python代码。
 
 
 
-## Results
+## 结果展示
 
-### Body Estimation
+### 身体关键点
 <p align="center">
     <img src="doc/media/dance.gif", width="480">
 </p>
 
 ## Coming Soon (But Already Working!)
 
-### Body + Hands + Face Estimation
+### 身体+手+脸
 <p align="center">
     <img src="doc/media/pose_face_hands.gif", width="480">
 </p>
 
-### Body + Face Estimation
+### 身体 + 脸 
 <p align="center">
     <img src="doc/media/pose_face.gif", width="480">
 </p>
 
-### Body + Hands
+### 身体 + 手
 <p align="center">
     <img src="doc/media/pose_hands.gif", width="480">
 </p>
 
 
-## Contents
-1. [Installation](#installation)
-2. [Quick Start](#quick-start)
+## Contents 内容列表
+1. [安装](#安装)
+2. [快速开始](#快速开始)
     1. [Demo](#demo)
     2. [OpenPose Wrapper](#openpose-wrapper)
     3. [OpenPose Library](#openpose-library)
-3. [Output](#output)
+3. [输出](#输出)
     1. [Output Format](#output-format)
     2. [Reading Saved Results](#reading-saved-results)
 4. [Send Us your Feed-Back!](#send-us-your-feed-back)
@@ -66,12 +66,12 @@ The pose estimation work is based on the C++ code from [the ECCV 2016 demo](http
 
 
 
-## Installation
+## 安装
 Installation steps on [doc/installation.md](doc/installation.md).
 
 
 
-## Quick Start
+## 快速开始
 Most users cases should not need to dive deep into the library, they might just be able to use the [Demo](#demo) or the simple [OpenPose Wrapper](#openpose-wrapper). So you can most probably skip the library details on [OpenPose Library](#openpose-library).
 
 
@@ -106,7 +106,7 @@ doxygen doc_autogeneration.doxygen
 
 
 
-## Output
+## 输出
 #### Output Format
 There are 2 alternatives to save the **(x,y,score) body part locations**. The `write_pose` flag uses the OpenCV cv::FileStorage default formats (JSON, XML and YML). However, the JSON format is only available after OpenCV 3.0. Hence, `write_pose_json` saves the people pose data as a custom JSON file. For the later, each JSON file has a `people` array of objects, where each object has an array `body_parts` containing the body part locations and detection confidence formatted as `x1,y1,c1,x2,y2,c2,...`. The coordinates `x` and `y` can be normalized to the range [0,1], [-1,1], [0, source size], [0, output size], etc., depending on the flag `scale_mode`. In addition, `c` is the confidence in the range [0,1].
 
