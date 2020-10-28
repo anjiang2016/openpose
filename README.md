@@ -6,31 +6,22 @@ OpenPose 开源姿态工程
 OpenPose是一个**实时多人关键点检测库，是用C++的多线程技术写成的**，同时也使用了OpenCV 和 Caffe*
 * 用Caffe训练的，但是准备提供用于tensorflow 和  Torch的接口.（如果你实现了这些接口，欢迎融合进来).OpenPose 可免费用于非商业应用。如果用作商业应用，请联系我们。 
 
-OpenPose is a **library for real-time multi-person key-point detection and multi-threading written in C++** using OpenCV and Caffe*, authored by [Gines Hidalgo](https://www.linkedin.com/in/gineshidalgo/), [Zhe Cao](http://www.andrew.cmu.edu/user/zhecao), [Tomas Simon](http://www.cs.cmu.edu/~tsimon/), [Shih-En Wei](https://scholar.google.com/citations?user=sFQD3k4AAAAJ&hl=en), [Hanbyul Joo](http://www.cs.cmu.edu/~hanbyulj/) and [Yaser Sheikh](http://www.cs.cmu.edu/~yaser/).
+本库的主要功能：
+* 多人 15 或 **18身体姿态关键点**
 
-* It uses Caffe, but the code is ready to be ported to other frameworks (e.g. Tensorflow or Torch). If you implement any of those, please, make a pull request and we will add it!
+* 多人 **2x21手部关键点**
 
-OpenPose is freely available for free non-commercial use, and may be redistributed under these conditions. Please, see the [license](LICENSE) for further details. Contact us for commercial purposes.
+* 多人 **70-key-point face** 
 
+* **多线程** 模块
 
+* 可图片，可视频，可摄像头
 
-Library main functionality:
+* 结果兼容各种格式（JSON,XML,PNG,JPG,...)
 
-* Multi-person 15 or **18-key-point body pose** estimation and rendering.
+* 可视化简单
 
-* Multi-person **2x21-key-point hand** estimation and rendering (coming soon in around 1-2 months!).
-
-* Multi-person **70-key-point face** estimation and rendering (coming soon in around 2-3 months!).
-
-* Flexible and easy-to-configure **multi-threading** module.
-
-* Image, video and webcam reader.
-
-* Able to save and load the results in various formats (JSON, XML, PNG, JPG, ...).
-
-* Small display and GUI for simple result visualization.
-
-* All the functionality is wrapped into a **simple-to-use OpenPose Wrapper class**.
+* 所有的功能都被融合进了：  **simple-to-use OpenPose wrapper class**.
 
 The pose estimation work is based on the C++ code from [the ECCV 2016 demo](https://github.com/CMU-Perceptual-Computing-Lab/caffe_rtpose), "Realtime Multiperson Pose Estimation", [Zhe Cao](http://www.andrew.cmu.edu/user/zhecao), [Tomas Simon](http://www.cs.cmu.edu/~tsimon/), [Shih-En Wei](https://scholar.google.com/citations?user=sFQD3k4AAAAJ&hl=en), [Yaser Sheikh](http://www.cs.cmu.edu/~yaser/). The [full project repo](https://github.com/ZheC/Multi-Person-Pose-Estimation) includes Matlab and Python version, as well as training code.
 
