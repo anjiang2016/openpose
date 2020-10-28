@@ -55,12 +55,12 @@ OpenPose是一个**实时多人关键点检测库，是用C++的多线程技术�
 ## Contents 内容列表
 1. [安装](#安装)
 2. [快速开始](#快速开始)
-    1. [Demo](#demo)
+    1. [小样](#小样)
     2. [OpenPose Wrapper](#openpose-wrapper)
-    3. [OpenPose Library](#openpose-library)
+    3. [OpenPose 库](#openpose-库)
 3. [输出](#输出)
-    1. [Output Format](#output-format)
-    2. [Reading Saved Results](#reading-saved-results)
+    1. [输出格式](#输出格式)
+    2. [读取保存结果](#读取保存结果)
 4. [Send Us your Feed-Back!](#send-us-your-feed-back)
 5. [Citation](#citation)
 
@@ -76,7 +76,7 @@ Most users cases should not need to dive deep into the library, they might just 
 
 
 
-#### Demo
+#### 小样
 Your case if you just want to process a folder of images or video or webcam and display or save the pose results.
 
 Forget about the OpenPose library details and just read the [doc/demo_overview.md](doc/demo_overview.md) 1-page section.
@@ -88,7 +88,7 @@ Your case if you want to read a specific format of image source and/or add a spe
 
 Note: you should not need to modify OpenPose source code or examples, so that you can directly upgrade the OpenPose library anytime in the future without changing your code. You might create your custom code on [examples/user_code/](examples/user_code/) and compile it by using `make all` in the OpenPose folder.
 
-#### OpenPose Library
+#### OpenPose 库
 Your case if you want to change internal functions and/or extend its functionality. First, take a look to the [Demo](#demo) and [OpenPose Wrapper](#openpose-wrapper). Secondly, read the 2 following subsections: OpenPose Overview and Extending Functionality.
 
 1. OpenPose Overview: Learn the basics about our library source code on [doc/library_overview.md](doc/library_overview.md).
@@ -107,7 +107,7 @@ doxygen doc_autogeneration.doxygen
 
 
 ## 输出
-#### Output Format
+#### 输出格式
 There are 2 alternatives to save the **(x,y,score) body part locations**. The `write_pose` flag uses the OpenCV cv::FileStorage default formats (JSON, XML and YML). However, the JSON format is only available after OpenCV 3.0. Hence, `write_pose_json` saves the people pose data as a custom JSON file. For the later, each JSON file has a `people` array of objects, where each object has an array `body_parts` containing the body part locations and detection confidence formatted as `x1,y1,c1,x2,y2,c2,...`. The coordinates `x` and `y` can be normalized to the range [0,1], [-1,1], [0, source size], [0, output size], etc., depending on the flag `scale_mode`. In addition, `c` is the confidence in the range [0,1].
 
 ```
@@ -154,7 +154,7 @@ The saving order is body parts + background + PAFs. Any of them can be disabled 
 
 Where each index is the key value corresponding with each body part on `POSE_COCO_BODY_PARTS`, e.g. 0 for "Neck", 1 for "RShoulder", etc.
 
-#### Reading Saved Results
+#### 读取保存结果
 We use standard formats (JSON, XML, PNG, JPG, ...) to save our results, so there will be lots of frameworks to read them later, but you might also directly use our functions on [include/openpose/filestream.hpp](include/openpose/filestream.hpp). In particular, `loadData` (for JSON, XML and YML files) and `loadImage` (for image formats such as PNG or JPG) to load the data into cv::Mat format.
 
 
