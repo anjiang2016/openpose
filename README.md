@@ -67,19 +67,17 @@ OpenPose是一个**实时多人关键点检测库，是用C++的多线程技术�
 
 
 ## 安装
-Installation steps on [doc/installation.md](doc/installation.md).
+安装步骤在这里： [doc/installation.md](doc/installation.md).
 
 
 
 ## 快速开始
-Most users cases should not need to dive deep into the library, they might just be able to use the [Demo](#demo) or the simple [OpenPose Wrapper](#openpose-wrapper). So you can most probably skip the library details on [OpenPose Library](#openpose-library).
-
+大部分用户不需要太深入的理解本库，只用[Demo](#demo)或者[OpenPose Wrapper](#openpose-wrapper)。所以可以不看库内的详细细节，感兴趣的话，可以去看看[OpenPose Library](#openpose-library).
 
 
 #### 小样
-Your case if you just want to process a folder of images or video or webcam and display or save the pose results.
-
-Forget about the OpenPose library details and just read the [doc/demo_overview.md](doc/demo_overview.md) 1-page section.
+如果你只是想试试本代码在一些图片，一些视频或者摄像头上的效果，并把结果保存下来，
+那你就不用关心 Openpose library中的所有细节，只用读取[doc/demo overview.md](doc/demo_overview.md)第1页即可。
 
 #### OpenPose Wrapper
 Your case if you want to read a specific format of image source and/or add a specific post-processing function and/or implement your own display/saving.
