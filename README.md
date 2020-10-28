@@ -1,7 +1,10 @@
-OpenPose
+OpenPose 开源姿态工程
 ====================================
 
-## Introduction
+##  介绍
+
+OpenPose是一个**实时多人关键点检测库，是用C++的多线程技术写成的**，同时也使用了OpenCV 和 Caffe*
+* 用Caffe训练的，但是准备提供用于tensorflow 和  Torch的接口.（如果你实现了这些接口，欢迎融合进来).OpenPose 可免费用于非商业应用。如果用作商业应用，请联系我们。 
 
 OpenPose is a **library for real-time multi-person key-point detection and multi-threading written in C++** using OpenCV and Caffe*, authored by [Gines Hidalgo](https://www.linkedin.com/in/gineshidalgo/), [Zhe Cao](http://www.andrew.cmu.edu/user/zhecao), [Tomas Simon](http://www.cs.cmu.edu/~tsimon/), [Shih-En Wei](https://scholar.google.com/citations?user=sFQD3k4AAAAJ&hl=en), [Hanbyul Joo](http://www.cs.cmu.edu/~hanbyulj/) and [Yaser Sheikh](http://www.cs.cmu.edu/~yaser/).
 
