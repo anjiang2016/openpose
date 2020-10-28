@@ -86,15 +86,15 @@ OpenPose是一个**实时多人关键点检测库，是用C++的多线程技术�
 注意：你不用修改OpenPose的源码或者例程，你的代码可以随着openpose的升级而升级，不需要做任何改变。你可以把你自己的定制化代码放入[examples/user_code/](examples/user_code/),然后用`make all`进行编译。
 
 #### OpenPose 库
-Your case if you want to change internal functions and/or extend its functionality. First, take a look to the [Demo](#demo) and [OpenPose Wrapper](#openpose-wrapper). Secondly, read the 2 following subsections: OpenPose Overview and Extending Functionality.
+如果你想改变内部功能或者对内部功能进行扩展。首先，先学习一下[Demo](#demo) 和 [OpenPose Wrapper](#openpose-wrapper).其次，阅读下面两部分：OpenPose一览 和 功能扩展。
 
-1. OpenPose Overview: Learn the basics about our library source code on [doc/library_overview.md](doc/library_overview.md).
+1. OpenPose一览：学习基础库的源代码[doc/library overview.md](doc/library_overview.md).
 
-2. Extending Functionality: Learn how to extend our library on [doc/library_extend_functionality.md](doc/library_extend_functionality.md).
+2. 功能扩展方法：学习如何对此库进行扩展[doc/library extend functionality.md](doc/library_extend_functionality.md).
 
-3. Adding An Extra Module: Learn how to add an extra module on [doc/library_add_new_module.md](doc/library_add_new_module.md).
+3. 添加一个额外的模块：学习如何添加一个额外的模块[doc/library and new module.md](doc/library_add_new_module.md).
 
-#### Doxygen Documentation Autogeneration
+#### Doxygen Documentation Autogeneration 自动生成AIP手册
 You can generate the documentation by running the following command. The documentation will be generated on `doc/doxygen/html/index.html`. You can simply open it with double click (your default browser should automatically display it).
 ```
 cd doc/
@@ -157,7 +157,7 @@ We use standard formats (JSON, XML, PNG, JPG, ...) to save our results, so there
 
 
 ## Custom Caffe
-We only modified some Caffe compilation flags and minor details. You can use use your own Caffe distribution, these are the files we added and modified:
+We only modified some Caffe compilation flags and minor details. You can use  your own Caffe distribution, these are the files we added and modified:
 
 1. Added files: `install_caffe.sh`; as well as `Makefile.config.Ubuntu14.example`, `Makefile.config.Ubuntu16.example`, `Makefile.config.Ubuntu14_cuda_7.example` and `Makefile.config.Ubuntu16_cuda_7.example` (extracted from `Makefile.config.example`). Basically, you must enable cuDNN.
 2. Edited file: Makefile. Search for "# OpenPose: " to find the edited code. We basically added the C++11 flag to avoid issues in some old computers.
