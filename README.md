@@ -156,37 +156,37 @@ We use standard formats (JSON, XML, PNG, JPG, ...) to save our results, so there
 
 
 
-## Custom Caffe
-We only modified some Caffe compilation flags and minor details. You can use  your own Caffe distribution, these are the files we added and modified:
+## 个性化配置Caffe
+我们只是改变了一些编译标志和少数细节。你可以用你自己的Caffe实现，下面是我们所做的更改：
 
-1. Added files: `install_caffe.sh`; as well as `Makefile.config.Ubuntu14.example`, `Makefile.config.Ubuntu16.example`, `Makefile.config.Ubuntu14_cuda_7.example` and `Makefile.config.Ubuntu16_cuda_7.example` (extracted from `Makefile.config.example`). Basically, you must enable cuDNN.
-2. Edited file: Makefile. Search for "# OpenPose: " to find the edited code. We basically added the C++11 flag to avoid issues in some old computers.
-3. Optional - deleted Caffe file: `Makefile.config.example`.
-4. Finally, run `make all && make distribute` in your Caffe version and modify the Caffe directory variable in our Makefile config file: `./Makefile.config.UbuntuX.example` (where X is 14 or 16 depending on your Ubuntu version), set the `CAFFE_DIR` parameter to the path where both the `include` and `lib` Caffe folders are located.
+1. 添加文件：`install_caffe.sh`; `Makefile.config.Ubuntu14.example`, `Makefile.config.Ubuntu16.example`, `Makefile.config.Ubuntu14_cuda_7.example` and `Makefile.config.Ubuntu16_cuda_7.example` (extracted from `Makefile.config.example`). 基本上，你需要开启cnDNN功能。
+2. 编辑文件： Makefile.  搜索 "# OpenPose: " 去查找我们编辑过的代码。我们基本上是添加了C++11的编译标志，避免了一些旧任务的报错。
+3. 选项- 删除 Caffe file: `Makefile.config.example`.
+4. 最后，运行 `make all && make distribute` 。修改Makefile config文件中的 Caffe directory 路径变量`./Makefile.config.UbuntuX.example`，`CAFFE_DIR` 设置为 包含`include` and `lib` Caffe 文件夹。
 
 
-
-## Send Us your Feed-Back!
+## 欢迎反馈!
+我们的库对于研究者来说是开源的，我们希望可以持续性的改进提升它，所以，你的反馈十分重要
 Our library is open source for research purposes, and we want to continuously improve it! So please, let us know if...
 
-1. ... you find any bug (in functionality or speed).
+1. 如果你发现bug,在功能上或者在速度上，请一定联系我们。
 
-2. ... you added some functionality to some class or some new Worker<T> subclass which we might potentially incorporate to our library.
+2. 如果你对一些类添加了一些功能，或者添加了一些新的子类，我们会考虑合并到我们的库中
 
-3. ... you know how to speed up or make more clear any part of the library.
+3. 如果你知道如何加速，如何让代码更加清晰。
 
-4. ... you have request about possible functionality.
+4. 如果你对已有功能有建议。
 
-5. ... etc.
+5. 等等都可以反馈给我们
 
-Just comment on GibHub or make a pull request! We will answer you back as soon as possible!
+只用 提交一个request即可，我们会尽快回复你的。
 
 
-
-## Citation
+## 引用
 Please cite the paper in your publications if it helps your research:
+如果这对你的研究有用，请引用这个论文。
 
-### Pose Estimation
+### 姿态估计算法
 
     @inproceedings{cao2017realtime,
       author = {Zhe Cao and Tomas Simon and Shih-En Wei and Yaser Sheikh},
