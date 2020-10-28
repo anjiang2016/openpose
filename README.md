@@ -80,11 +80,10 @@ OpenPose是一个**实时多人关键点检测库，是用C++的多线程技术�
 那你就不用关心 Openpose library中的所有细节，只用读取[doc/demo overview.md](doc/demo_overview.md)第1页即可。
 
 #### OpenPose Wrapper
-Your case if you want to read a specific format of image source and/or add a specific post-processing function and/or implement your own display/saving.
+如果你想读取一段特殊格式的图片，或者添加一段特殊的预处理函数，或者实现你自己的显示保存代码
+你也不用进入繁琐的库中去，只用看看 `Wrapper`工程[examples/tutorial wrapper/](examples/tutorial_wrapper/)
 
-(Almost) forget about the library, just take a look to the `Wrapper` tutorial on [examples/tutorial_wrapper/](examples/tutorial_wrapper/).
-
-Note: you should not need to modify OpenPose source code or examples, so that you can directly upgrade the OpenPose library anytime in the future without changing your code. You might create your custom code on [examples/user_code/](examples/user_code/) and compile it by using `make all` in the OpenPose folder.
+注意：你不用修改OpenPose的源码或者例程，你的代码可以随着openpose的升级而升级，不需要做任何改变。你可以把你自己的定制化代码放入[examples/user_code/](examples/user_code/),然后用`make all`进行编译。
 
 #### OpenPose 库
 Your case if you want to change internal functions and/or extend its functionality. First, take a look to the [Demo](#demo) and [OpenPose Wrapper](#openpose-wrapper). Secondly, read the 2 following subsections: OpenPose Overview and Extending Functionality.
